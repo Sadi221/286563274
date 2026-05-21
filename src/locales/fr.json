@@ -100,7 +100,15 @@
   "donation": {
     "badge": "Faire un don",
     "title": "Soutenez nos actions",
-    "description": "Chaque don finance directement nos programmes de santé et de développement durable au Sénégal. Choisissez votre montant ci-dessous."
+    "description": "Chaque don finance directement nos programmes de santé et de développement durable au Sénégal. Choisissez votre montant ci-dessous.",
+    "widget": {
+      "5":     "Un geste solidaire",
+      "10":    "Un impact concret",
+      "20":    "Un soutien fort",
+      "libre": "Je choisis mon montant",
+      "libreLabel": "Libre",
+      "secure": "🔒 Paiement sécurisé par Stripe"
+    }
   },
   "partners": {
     "badge": "Nos partenaires",

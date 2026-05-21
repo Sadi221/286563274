@@ -100,7 +100,15 @@
   "donation": {
     "badge": "Make a donation",
     "title": "Support our work",
-    "description": "Every donation directly funds our health and sustainable development programmes in Senegal. Choose your amount below."
+    "description": "Every donation directly funds our health and sustainable development programmes in Senegal. Choose your amount below.",
+    "widget": {
+      "5":     "A solidarity gesture",
+      "10":    "A concrete impact",
+      "20":    "A strong support",
+      "libre": "I choose my amount",
+      "libreLabel": "Custom",
+      "secure": "🔒 Secure payment by Stripe"
+    }
   },
   "partners": {
     "badge": "Our partners",
