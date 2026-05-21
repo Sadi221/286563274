@@ -1,37 +1,16 @@
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 import { fadeInUp, stagger, viewport } from '../utils/animations'
 
-const projects = [
-  {
-    tag: 'Santé numérique',
-    title: 'Jappoo Faju',
-    desc: 'Plateforme de solidarité médicale connectant donateurs et patients sénégalais en besoin urgent. Dons via Wave, Orange Money et carte bancaire.',
-    statusLabel: 'Actif',
-    statusClass: 'bg-green-100 text-green-700',
-    icon: '💊',
-    link: 'https://www.jappoo-faju.org',
-  },
-  {
-    tag: 'Agriculture',
-    title: 'Jardins Solidaires',
-    desc: "Soutien aux agricultures familiales au Sénégal avec des techniques durables et résistantes aux aléas climatiques.",
-    statusLabel: 'En développement',
-    statusClass: 'bg-amber-100 text-amber-700',
-    icon: '🌾',
-    link: null,
-  },
-  {
-    tag: 'Environnement',
-    title: 'Reforestation Communautaire',
-    desc: 'Programme de reforestation impliquant les communautés locales dans la protection de leur environnement naturel.',
-    statusLabel: 'En développement',
-    statusClass: 'bg-amber-100 text-amber-700',
-    icon: '🌳',
-    link: null,
-  },
+const projectsData = [
+  { key: 'jappoo',        icon: '💊', link: 'https://www.jappoo-faju.org', active: true },
+  { key: 'jardins',       icon: '🌾', link: null, active: false },
+  { key: 'reforestation', icon: '🌳', link: null, active: false },
 ]
 
 export default function Projects() {
+  const { t } = useTranslation()
+
   return (
     <section id="projets" className="py-14 md:py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-6">
@@ -44,10 +23,12 @@ export default function Projects() {
           viewport={viewport}
         >
           <motion.span variants={fadeInUp} className="inline-block bg-dss-light text-dss-green px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
-            Nos projets
+            {t('projects.badge')}
           </motion.span>
           <motion.h2 variants={fadeInUp} className="text-dss-navy mb-4" style={{ fontSize: 'clamp(28px,4vw,48px)' }}>
-            Des initiatives concrètes<br />pour un impact durable
+            {t('projects.title').split('\n').map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </motion.h2>
         </motion.div>
 
@@ -58,9 +39,9 @@ export default function Projects() {
           whileInView="visible"
           viewport={viewport}
         >
-          {projects.map(p => (
+          {projectsData.map(p => (
             <motion.div
-              key={p.title}
+              key={p.key}
               variants={fadeInUp}
               whileHover={{ y: -5, transition: { duration: 0.22 } }}
               className="bg-white rounded-2xl p-8 shadow-md shadow-black/5 flex flex-col"
@@ -70,11 +51,15 @@ export default function Projects() {
                   className="text-4xl"
                   whileHover={{ rotate: [0, -10, 10, 0], transition: { duration: 0.4 } }}
                 >{p.icon}</motion.span>
-                <span className={`${p.statusClass} px-3 py-1 rounded-full text-xs font-bold`}>{p.statusLabel}</span>
+                <span className={`px-3 py-1 rounded-full text-xs font-bold ${p.active ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>
+                  {p.active ? t('projects.statusActive') : t('projects.statusDev')}
+                </span>
               </div>
-              <span className="text-xs font-bold text-dss-green uppercase tracking-widest mb-2">{p.tag}</span>
-              <h3 className="text-xl font-bold text-dss-navy mb-3">{p.title}</h3>
-              <p className="text-sm text-dss-gray leading-[1.8] flex-1">{p.desc}</p>
+              <span className="text-xs font-bold text-dss-green uppercase tracking-widest mb-2">
+                {t(`projects.${p.key}.tag`)}
+              </span>
+              <h3 className="text-xl font-bold text-dss-navy mb-3">{t(`projects.${p.key}.title`)}</h3>
+              <p className="text-sm text-dss-gray leading-[1.8] flex-1">{t(`projects.${p.key}.desc`)}</p>
               {p.link && (
                 <motion.a
                   href={p.link}
@@ -84,7 +69,7 @@ export default function Projects() {
                   whileTap={{ scale: 0.98 }}
                   className="mt-6 bg-dss-green text-white px-6 py-3 rounded-xl text-sm font-bold text-center hover:bg-dss-dark transition-colors"
                 >
-                  Visiter le site →
+                  {t('projects.visitSite')}
                 </motion.a>
               )}
             </motion.div>

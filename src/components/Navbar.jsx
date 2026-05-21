@@ -1,23 +1,31 @@
 import { useState, useEffect } from 'react'
-
-const links = [
-  { label: 'Notre mission',  href: '#mission' },
-  { label: 'Impact',         href: '#impact' },
-  { label: 'Projets',        href: '#projets' },
-  { label: 'Jappoo Faju',   href: '#jappoo' },
-  { label: 'Don',            href: '#don' },
-  { label: 'Contact',        href: '#contact' },
-]
+import { useTranslation } from 'react-i18next'
 
 export default function Navbar() {
-  const [scrolled,  setScrolled]  = useState(false)
-  const [menuOpen,  setMenuOpen]  = useState(false)
+  const { t, i18n } = useTranslation()
+  const [scrolled, setScrolled] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const links = [
+    { label: t('nav.mission'),  href: '#mission' },
+    { label: t('nav.impact'),   href: '#impact' },
+    { label: t('nav.projects'), href: '#projets' },
+    { label: t('nav.jappoo'),   href: '#jappoo' },
+    { label: t('nav.donate'),   href: '#don' },
+    { label: t('nav.contact'),  href: '#contact' },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+
+  const toggleLang = () => {
+    const next = i18n.language === 'fr' ? 'en' : 'fr'
+    i18n.changeLanguage(next)
+    localStorage.setItem('dss-lang', next)
+  }
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -48,9 +56,22 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
+
+          {/* Lang toggle */}
+          <button
+            onClick={toggleLang}
+            className={`text-xs font-bold tracking-widest uppercase px-2.5 py-1 rounded-md border transition-colors ${
+              scrolled
+                ? 'border-slate-300 text-slate-500 hover:border-dss-green hover:text-dss-green'
+                : 'border-white/40 text-white/80 hover:border-white hover:text-white'
+            }`}
+          >
+            {i18n.language === 'fr' ? 'EN' : 'FR'}
+          </button>
+
           <a href="https://buy.stripe.com/test_6oU7sL7LN3yT3Tt4ko9MY00" target="_blank" rel="noreferrer"
             className="bg-dss-coral text-white px-5 py-2.5 rounded-lg text-sm font-bold shadow-lg shadow-dss-coral/30 hover:bg-orange-700 transition-colors">
-            Faire un don →
+            {t('nav.donateBtn')}
           </a>
         </div>
 
@@ -78,9 +99,15 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
+          <button
+            onClick={toggleLang}
+            className="text-xs font-bold text-slate-500 border border-slate-300 rounded-md px-3 py-1.5 w-fit hover:text-dss-green hover:border-dss-green transition-colors"
+          >
+            {i18n.language === 'fr' ? 'English' : 'Français'}
+          </button>
           <a href="https://buy.stripe.com/test_6oU7sL7LN3yT3Tt4ko9MY00" target="_blank" rel="noreferrer"
             className="bg-dss-coral text-white px-5 py-3 rounded-xl text-sm font-bold text-center mt-1">
-            Faire un don →
+            {t('nav.donateBtn')}
           </a>
         </div>
       </div>

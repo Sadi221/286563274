@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "mission": "Notre mission",
+    "impact": "Impact",
+    "projects": "Projets",
+    "jappoo": "Jappoo Faju",
+    "donate": "Don",
+    "contact": "Contact",
+    "donateBtn": "Faire un don →"
+  },
+  "hero": {
+    "badge": "ONG française · Sénégal & Afrique",
+    "subtitle": "Développement Solidaire",
+    "tagline": "& Santé",
+    "description": "Améliorer le bien-être des populations vulnérables à travers la santé, le développement durable et la lutte contre le changement climatique.",
+    "ctaMission": "Découvrir notre mission",
+    "ctaDonate": "Faire un don →"
+  },
+  "mission": {
+    "badge": "Notre mission",
+    "title": "Agir pour les populations\nles plus vulnérables",
+    "description": "Fondée en 2019 à Paris, DSS œuvre pour améliorer le bien-être général des communautés à travers trois piliers d'action complémentaires.",
+    "pillars": {
+      "health": {
+        "title": "Santé & Soins",
+        "desc": "Mise en place d'activités de prévention et de soins médicaux pour les populations vulnérables. Accès aux soins essentiels et accompagnement médical."
+      },
+      "agriculture": {
+        "title": "Développement Durable",
+        "desc": "Projets d'agriculture durable et de protection de l'environnement. Soutien aux communautés pour un avenir résilient face aux défis climatiques."
+      },
+      "climate": {
+        "title": "Lutte contre le Changement Climatique",
+        "desc": "Promotion de la participation active des individus et communautés dans la lutte contre le changement climatique en Afrique de l'Ouest."
+      }
+    }
+  },
+  "impact": {
+    "badge": "Notre impact",
+    "title": "Des actions concrètes,\ndes résultats mesurables",
+    "stats": {
+      "founded": { "label": "Fondée à Paris", "desc": "Association loi 1901" },
+      "pillars": { "label": "Piliers d'action", "desc": "Santé, Agriculture, Climat" },
+      "hospitals": { "label": "Hôpitaux partenaires", "desc": "Fann & Dalal Jamm, Dakar" },
+      "transparency": { "label": "Transparence", "desc": "Chaque don tracé en temps réel" }
+    }
+  },
+  "projects": {
+    "badge": "Nos projets",
+    "title": "Des initiatives concrètes\npour un impact durable",
+    "visitSite": "Visiter le site →",
+    "statusActive": "Actif",
+    "statusDev": "En développement",
+    "jappoo": {
+      "tag": "Santé numérique",
+      "title": "Jappoo Faju",
+      "desc": "Plateforme de solidarité médicale connectant donateurs et patients sénégalais en besoin urgent. Dons via Wave, Orange Money et carte bancaire."
+    },
+    "jardins": {
+      "tag": "Agriculture",
+      "title": "Jardins Solidaires",
+      "desc": "Soutien aux agricultures familiales au Sénégal avec des techniques durables et résistantes aux aléas climatiques."
+    },
+    "reforestation": {
+      "tag": "Environnement",
+      "title": "Reforestation Communautaire",
+      "desc": "Programme de reforestation impliquant les communautés locales dans la protection de leur environnement naturel."
+    }
+  },
+  "jappooSection": {
+    "badge": "Projet phare",
+    "title": "Jappoo Faju —",
+    "subtitle": "Aide-moi à guérir",
+    "p1": "Jappoo Faju (« aide-moi à guérir » en wolof) est notre plateforme numérique de solidarité médicale dédiée aux patients sénégalais dans le besoin.",
+    "p2": "Les hôpitaux partenaires soumettent des demandes validées par notre équipe. Chaque don est tracé en temps réel pour une transparence totale.",
+    "ctaDonate": "Faire un don →",
+    "ctaCases": "Voir les cas",
+    "features": {
+      "mobile": { "title": "Application mobile Android", "desc": "Disponible sur Google Play" },
+      "payment": { "title": "Paiement sécurisé", "desc": "Wave, Orange Money, Visa/Mastercard" },
+      "hospitals": { "title": "Hôpitaux validés", "desc": "Partenaires certifiés au Sénégal" },
+      "transparent": { "title": "100% transparent", "desc": "Chaque don tracé en temps réel" }
+    }
+  },
+  "workflow": {
+    "badge": "Comment ça marche",
+    "title": "Du patient au donateur —\nun processus transparent",
+    "description": "Chaque euro donné est tracé de bout en bout. Voici comment fonctionne la chaîne de solidarité médicale Jappoo Faju.",
+    "ctaText": "Prêt à aider un patient sénégalais aujourd'hui ?",
+    "ctaBtn": "Voir les demandes en cours →",
+    "steps": {
+      "s1": { "title": "Demande médicale", "desc": "Un patient hospitalisé a besoin d'aide financière pour ses soins. L'hôpital partenaire identifie le besoin." },
+      "s2": { "title": "Validation DSS", "desc": "Notre équipe examine chaque dossier : urgence médicale, situation financière, structure partenaire agréée." },
+      "s3": { "title": "Publication", "desc": "La demande validée est publiée sur Jappoo Faju avec le pseudonyme du patient et les détails médicaux." },
+      "s4": { "title": "Mobilisation", "desc": "Les donateurs choisissent le patient qu'ils souhaitent aider et effectuent un don sécurisé en ligne." },
+      "s5": { "title": "Soins", "desc": "Le financement est versé directement à l'hôpital. Le patient reçoit les soins dont il a besoin." },
+      "s6": { "title": "Traçabilité", "desc": "Chaque don est documenté et rapporté. Transparence totale pour les donateurs et les partenaires." }
+    }
+  },
+  "donation": {
+    "badge": "Faire un don",
+    "title": "Soutenez nos actions",
+    "description": "Chaque don finance directement nos programmes de santé et de développement durable au Sénégal. Choisissez votre montant ci-dessous."
+  },
+  "partners": {
+    "badge": "Nos partenaires",
+    "title": "Des hôpitaux de confiance\nà nos côtés",
+    "description": "Nos hôpitaux partenaires sont rigoureusement sélectionnés pour garantir la qualité et la traçabilité de chaque intervention financée.",
+    "medicalPartner": "Partenaire médical",
+    "ctaTitle": "Vous êtes un établissement de santé ?",
+    "ctaDesc": "Rejoignez le réseau DSS et permettez à vos patients d'accéder aux dons de solidarité médicale.",
+    "ctaBtn": "Devenir partenaire →",
+    "fann": { "name": "Hôpital Fann", "desc": "Centre hospitalier universitaire de référence nationale, pionnier dans l'accueil et le traitement des patients vulnérables." },
+    "dalalJamm": { "name": "Dalal Jamm", "desc": "Établissement de santé engagé dans l'accès aux soins pour tous, partenaire clé de l'initiative Jappoo Faju." }
+  },
+  "team": {
+    "badge": "L'association",
+    "title": "Une organisation reconnue",
+    "description": "DSS est une association loi 1901 déclarée à la Préfecture de Police de Paris, enregistrée sous le numéro W751251475.",
+    "infos": {
+      "regNum": { "label": "Numéro d'enregistrement" },
+      "declDate": { "label": "Date de déclaration", "value": "11 mars 2019" },
+      "address": { "label": "Siège social" },
+      "status": { "label": "Statut juridique", "value": "Association loi 1901\nà but non lucratif" }
+    }
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Nous contacter",
+    "description": "Vous souhaitez en savoir plus sur nos actions, devenir partenaire ou rejoindre l'association ? Écrivez-nous.",
+    "labelAddress": "Adresse",
+    "labelEmail": "Email",
+    "labelProject": "Projet santé",
+    "form": {
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "message": "Message",
+      "messagePlaceholder": "Votre message...",
+      "sending": "Envoi en cours...",
+      "submit": "Envoyer le message →",
+      "successTitle": "Message envoyé !",
+      "successDesc": "Nous vous répondrons dans les plus brefs délais.",
+      "error": "Une erreur est survenue. Écrivez-nous directement à contact@dss-france.org."
+    }
+  },
+  "footer": {
+    "navTitle": "Navigation",
+    "projectTitle": "Projet santé",
+    "projectDesc": "Solidarité médicale\nau Sénégal",
+    "copyright": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "links": {
+      "mission": "Notre mission",
+      "impact": "Notre impact",
+      "projects": "Nos projets",
+      "jappoo": "Jappoo Faju",
+      "donate": "Faire un don",
+      "partners": "Partenaires",
+      "association": "L'association",
+      "contact": "Contact"
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "mission": "Our mission",
+    "impact": "Impact",
+    "projects": "Projects",
+    "jappoo": "Jappoo Faju",
+    "donate": "Donate",
+    "contact": "Contact",
+    "donateBtn": "Donate →"
+  },
+  "hero": {
+    "badge": "French NGO · Senegal & Africa",
+    "subtitle": "Développement Solidaire",
+    "tagline": "& Santé",
+    "description": "Improving the well-being of vulnerable populations through healthcare, sustainable development and the fight against climate change.",
+    "ctaMission": "Discover our mission",
+    "ctaDonate": "Donate →"
+  },
+  "mission": {
+    "badge": "Our mission",
+    "title": "Acting for the most\nvulnerable populations",
+    "description": "Founded in 2019 in Paris, DSS works to improve the general well-being of communities through three complementary pillars of action.",
+    "pillars": {
+      "health": {
+        "title": "Health & Care",
+        "desc": "Setting up prevention and medical care activities for vulnerable populations. Access to essential care and medical support."
+      },
+      "agriculture": {
+        "title": "Sustainable Development",
+        "desc": "Sustainable agriculture and environmental protection projects. Supporting communities for a resilient future in the face of climate challenges."
+      },
+      "climate": {
+        "title": "Fighting Climate Change",
+        "desc": "Promoting the active participation of individuals and communities in the fight against climate change in West Africa."
+      }
+    }
+  },
+  "impact": {
+    "badge": "Our impact",
+    "title": "Concrete actions,\nmeasurable results",
+    "stats": {
+      "founded": { "label": "Founded in Paris", "desc": "Non-profit association" },
+      "pillars": { "label": "Action pillars", "desc": "Health, Agriculture, Climate" },
+      "hospitals": { "label": "Partner hospitals", "desc": "Fann & Dalal Jamm, Dakar" },
+      "transparency": { "label": "Transparency", "desc": "Every donation tracked in real time" }
+    }
+  },
+  "projects": {
+    "badge": "Our projects",
+    "title": "Concrete initiatives\nfor lasting impact",
+    "visitSite": "Visit the site →",
+    "statusActive": "Active",
+    "statusDev": "Under development",
+    "jappoo": {
+      "tag": "Digital health",
+      "title": "Jappoo Faju",
+      "desc": "Medical solidarity platform connecting donors and Senegalese patients in urgent need. Donations via Wave, Orange Money and bank card."
+    },
+    "jardins": {
+      "tag": "Agriculture",
+      "title": "Solidarity Gardens",
+      "desc": "Supporting family farming in Senegal with sustainable techniques resilient to climate variability."
+    },
+    "reforestation": {
+      "tag": "Environment",
+      "title": "Community Reforestation",
+      "desc": "Reforestation program involving local communities in the protection of their natural environment."
+    }
+  },
+  "jappooSection": {
+    "badge": "Flagship project",
+    "title": "Jappoo Faju —",
+    "subtitle": "Help me heal",
+    "p1": "Jappoo Faju (\"help me heal\" in Wolof) is our digital medical solidarity platform dedicated to Senegalese patients in need.",
+    "p2": "Partner hospitals submit requests validated by our team. Every donation is tracked in real time for full transparency.",
+    "ctaDonate": "Donate →",
+    "ctaCases": "View cases",
+    "features": {
+      "mobile": { "title": "Android mobile app", "desc": "Available on Google Play" },
+      "payment": { "title": "Secure payment", "desc": "Wave, Orange Money, Visa/Mastercard" },
+      "hospitals": { "title": "Verified hospitals", "desc": "Certified partners in Senegal" },
+      "transparent": { "title": "100% transparent", "desc": "Every donation tracked in real time" }
+    }
+  },
+  "workflow": {
+    "badge": "How it works",
+    "title": "From patient to donor —\na transparent process",
+    "description": "Every euro donated is tracked end-to-end. Here is how the Jappoo Faju medical solidarity chain works.",
+    "ctaText": "Ready to help a Senegalese patient today?",
+    "ctaBtn": "View open requests →",
+    "steps": {
+      "s1": { "title": "Medical request", "desc": "A hospitalised patient needs financial help for their care. The partner hospital identifies the need." },
+      "s2": { "title": "DSS validation", "desc": "Our team reviews each case: medical urgency, financial situation, approved partner structure." },
+      "s3": { "title": "Publication", "desc": "The validated request is published on Jappoo Faju with the patient's pseudonym and medical details." },
+      "s4": { "title": "Mobilisation", "desc": "Donors choose the patient they wish to help and make a secure online donation." },
+      "s5": { "title": "Care", "desc": "Funding is paid directly to the hospital. The patient receives the care they need." },
+      "s6": { "title": "Traceability", "desc": "Every donation is documented and reported. Full transparency for donors and partners." }
+    }
+  },
+  "donation": {
+    "badge": "Make a donation",
+    "title": "Support our work",
+    "description": "Every donation directly funds our health and sustainable development programmes in Senegal. Choose your amount below."
+  },
+  "partners": {
+    "badge": "Our partners",
+    "title": "Trusted hospitals\nby our side",
+    "description": "Our partner hospitals are rigorously selected to guarantee the quality and traceability of every funded intervention.",
+    "medicalPartner": "Medical partner",
+    "ctaTitle": "Are you a healthcare facility?",
+    "ctaDesc": "Join the DSS network and give your patients access to medical solidarity donations.",
+    "ctaBtn": "Become a partner →",
+    "fann": { "name": "Fann Hospital", "desc": "National university hospital of reference, pioneer in welcoming and treating vulnerable patients." },
+    "dalalJamm": { "name": "Dalal Jamm", "desc": "Healthcare institution committed to universal access to care, a key partner of the Jappoo Faju initiative." }
+  },
+  "team": {
+    "badge": "The association",
+    "title": "A recognised organisation",
+    "description": "DSS is a French non-profit association (loi 1901) registered with the Paris Police Prefecture under number W751251475.",
+    "infos": {
+      "regNum": { "label": "Registration number" },
+      "declDate": { "label": "Declaration date", "value": "11 March 2019" },
+      "address": { "label": "Registered office" },
+      "status": { "label": "Legal status", "value": "Non-profit association\n(loi 1901)" }
+    }
+  },
+  "contact": {
+    "badge": "Contact",
+    "title": "Get in touch",
+    "description": "Want to learn more about our work, become a partner or join the association? Write to us.",
+    "labelAddress": "Address",
+    "labelEmail": "Email",
+    "labelProject": "Health project",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "message": "Message",
+      "messagePlaceholder": "Your message...",
+      "sending": "Sending...",
+      "submit": "Send message →",
+      "successTitle": "Message sent!",
+      "successDesc": "We will get back to you as soon as possible.",
+      "error": "An error occurred. Write to us directly at contact@dss-france.org."
+    }
+  },
+  "footer": {
+    "navTitle": "Navigation",
+    "projectTitle": "Health project",
+    "projectDesc": "Medical solidarity\nin Senegal",
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy policy",
+    "links": {
+      "mission": "Our mission",
+      "impact": "Our impact",
+      "projects": "Our projects",
+      "jappoo": "Jappoo Faju",
+      "donate": "Donate",
+      "partners": "Partners",
+      "association": "The association",
+      "contact": "Contact"
+    }
+  }
+}

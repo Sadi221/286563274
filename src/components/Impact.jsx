@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { fadeInUp, stagger, viewport } from '../utils/animations'
 
 function AnimatedCounter({ from, to, suffix = '', duration = 1400 }) {
@@ -23,14 +24,16 @@ function AnimatedCounter({ from, to, suffix = '', duration = 1400 }) {
   return <span ref={ref}>{value}{suffix}</span>
 }
 
-const stats = [
-  { from: 2015, to: 2019, suffix: '',   label: 'Fondée à Paris',      icon: '📅', desc: 'Association loi 1901' },
-  { from: 0,    to: 3,    suffix: '',   label: "Piliers d'action",     icon: '🎯', desc: 'Santé, Agriculture, Climat' },
-  { from: 0,    to: 2,    suffix: '',   label: 'Hôpitaux partenaires', icon: '🏥', desc: 'Fann & Dalal Jamm, Dakar' },
-  { from: 0,    to: 100,  suffix: '%',  label: 'Transparence',         icon: '🔍', desc: 'Chaque don tracé en temps réel' },
+const statsData = [
+  { from: 2015, to: 2019, suffix: '', icon: '📅', key: 'founded' },
+  { from: 0,    to: 3,    suffix: '', icon: '🎯', key: 'pillars' },
+  { from: 0,    to: 2,    suffix: '', icon: '🏥', key: 'hospitals' },
+  { from: 0,    to: 100,  suffix: '%', icon: '🔍', key: 'transparency' },
 ]
 
 export default function Impact() {
+  const { t } = useTranslation()
+
   return (
     <section id="impact" className="py-14 md:py-20 bg-dss-sand">
       <div className="max-w-6xl mx-auto px-6">
@@ -43,10 +46,12 @@ export default function Impact() {
           viewport={viewport}
         >
           <motion.span variants={fadeInUp} className="inline-block bg-white text-dss-green px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
-            Notre impact
+            {t('impact.badge')}
           </motion.span>
           <motion.h2 variants={fadeInUp} className="text-dss-navy" style={{ fontSize: 'clamp(28px,4vw,44px)' }}>
-            Des actions concrètes,<br />des résultats mesurables
+            {t('impact.title').split('\n').map((line, i) => (
+              <span key={i}>{line}{i === 0 && <br />}</span>
+            ))}
           </motion.h2>
         </motion.div>
 
@@ -57,9 +62,9 @@ export default function Impact() {
           whileInView="visible"
           viewport={viewport}
         >
-          {stats.map(s => (
+          {statsData.map(s => (
             <motion.div
-              key={s.label}
+              key={s.key}
               variants={fadeInUp}
               whileHover={{ scale: 1.04, transition: { duration: 0.2 } }}
               className="bg-white rounded-2xl p-6 text-center shadow-sm border border-slate-100 cursor-default"
@@ -68,8 +73,8 @@ export default function Impact() {
               <div className="font-serif font-black text-dss-green mb-1" style={{ fontSize: 'clamp(28px,3vw,40px)' }}>
                 <AnimatedCounter from={s.from} to={s.to} suffix={s.suffix} />
               </div>
-              <div className="text-sm font-bold text-dss-navy mb-1">{s.label}</div>
-              <div className="text-xs text-dss-gray">{s.desc}</div>
+              <div className="text-sm font-bold text-dss-navy mb-1">{t(`impact.stats.${s.key}.label`)}</div>
+              <div className="text-xs text-dss-gray">{t(`impact.stats.${s.key}.desc`)}</div>
             </motion.div>
           ))}
         </motion.div>

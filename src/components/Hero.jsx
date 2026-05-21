@@ -1,8 +1,10 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 import { fadeInUp, stagger, viewport } from '../utils/animations'
 
 export default function Hero() {
+  const { t } = useTranslation()
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] })
   const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
@@ -44,7 +46,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 bg-dss-green/35 backdrop-blur-sm border border-green-300/30 rounded-full px-4 py-2 mb-7">
             <span className="text-sm">🌍</span>
             <span className="text-[#A8E6C3] text-xs font-bold tracking-widest uppercase">
-              ONG française · Sénégal & Afrique
+              {t('hero.badge')}
             </span>
           </motion.div>
 
@@ -53,14 +55,13 @@ export default function Hero() {
             className="font-serif font-black text-white mb-6 leading-[1.05]"
             style={{ fontSize: 'clamp(38px,6vw,72px)' }}
           >
-            Développement<br />
-            <span className="text-[#A8E6C3]">Solidaire</span><br />
-            & Santé
+            {t('hero.subtitle')}<br />
+            <span className="text-[#A8E6C3]">{t('hero.tagline').split('&')[0]}</span>
+            {t('hero.tagline').includes('&') ? <>&<br />{t('hero.tagline').split('& ')[1]}</> : null}
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg text-white leading-[1.8] mb-8 max-w-lg">
-            Améliorer le bien-être des populations vulnérables à travers la santé,
-            le développement durable et la lutte contre le changement climatique.
+            {t('hero.description')}
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-wrap gap-4 mb-12">
@@ -70,7 +71,7 @@ export default function Hero() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
-              Découvrir notre mission
+              {t('hero.ctaMission')}
             </motion.a>
             <motion.a
               href="#don"
@@ -78,7 +79,7 @@ export default function Hero() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
-              Faire un don →
+              {t('hero.ctaDonate')}
             </motion.a>
           </motion.div>
 
